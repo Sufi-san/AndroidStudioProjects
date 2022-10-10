@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/birthday"
+        android:scaleX="1"
+        android:scaleY="2.9"
+        android:alpha="0.7"
+        />
+
+    <TextView
+        android:id="@+id/happy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="40sp"
+        android:textColor="#FF0018"
+        android:shadowRadius="10"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowColor="@android:color/holo_red_dark"
+        android:text="Happy Birthday,"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="40sp"
+        android:textColor="#009DFF"
+        android:shadowRadius="17"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowColor="@android:color/holo_blue_bright"
+        android:layout_below="@id/happy"
+        android:text="Faizan!"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:layout_below="@id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="38sp"
+        android:textColor="#00008B"
+        android:shadowRadius="17"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowColor="@android:color/holo_green_light"
+        android:text="Wishing you a very happy birthday and a splendid year ahead."
+        android:paddingTop="150dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="-From Sufiyan"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"/>
+
+
+</RelativeLayout>

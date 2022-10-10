@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AtmActivity">
+
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    tools:context=".AtmActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/atm_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/atm_machine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:text="ATM Simulation Software"
+            android:textSize="48sp"
+            android:textColor="#FF0000"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_margin="32dp"
+            android:background="#FFF59E"
+            android:alpha="0.8"/>
+
+        <TextView
+            android:id="@+id/main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/atm_image"
+            android:background="#000000"
+            android:text="Main Menu"
+            android:textAlignment="center"
+            android:textColor="#FFF157"
+            android:textSize="37sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_menu"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="70dp"
+            android:background="#ADD8E6">
+
+
+            <Button
+                android:id="@+id/balance_enquiry"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#000088"
+                android:onClick="actionBalance"
+                android:text="Balance Enquiry"
+                android:textColor="#FFF157"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balance_enquiry"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#000088"
+                android:onClick="actionExit"
+                android:text="Exit Session"
+                android:textColor="#FFF157"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/withdraw"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#000088"
+                android:onClick="actionWithdraw"
+                android:text="Cash Withdraw"
+                android:textColor="#FFF157"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Deposit"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/withdraw"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#000088"
+                android:onClick="actionDeposit"
+                android:text="Cash Deposit"
+                android:textColor="#FFF157"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
