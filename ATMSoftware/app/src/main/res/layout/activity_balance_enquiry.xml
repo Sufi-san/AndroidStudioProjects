@@ -34,9 +34,25 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="32dp"
                 android:background="#000000"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="#FFF157"
+                android:fontFamily="sans-serif-light"
+                android:text="Click Show Balance"
+                android:textColor="#D3D3D3"
                 android:textSize="37sp" />
+
+            <Button
+                android:id="@+id/show_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="48dp"
+                android:backgroundTint="#000088"
+                android:text="Show Balance"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:onClick="showBalance"/>
 
             <Button
                 android:id="@+id/menu_button"
