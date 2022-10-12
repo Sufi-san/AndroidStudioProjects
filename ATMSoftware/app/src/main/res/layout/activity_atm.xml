@@ -8,135 +8,205 @@
     tools:context=".AtmActivity">
 
     <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ADD8E6"
-    tools:context=".AtmActivity">
-    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ADD8E6"
+        tools:context=".AtmActivity"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="28dp">
 
-        <ImageView
-            android:id="@+id/atm_image"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/atm_machine" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:text="ATM Simulation Software"
-            android:textSize="48sp"
-            android:textColor="#FF0000"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:layout_margin="32dp"
-            android:background="#FFF59E"
-            android:alpha="0.8"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/main_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/atm_image"
-            android:background="#000000"
-            android:text="Main Menu"
-            android:textAlignment="center"
-            android:textColor="#FFF157"
-            android:textSize="37sp"
-            android:textStyle="bold" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/main_menu"
-            android:layout_alignParentBottom="true"
-            android:paddingTop="70dp"
-            android:background="#ADD8E6">
-
-
-            <Button
-                android:id="@+id/balance_enquiry"
-                android:layout_width="150dp"
+            <TextView
+                android:id="@+id/main_menu"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="Main Menu"
+                android:textAlignment="center"
+                android:textColor="#FFF157"
+                android:textSize="37sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balance_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="#000000"
+                android:text="Balance:"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/actual_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_menu"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#000088"
-                android:onClick="actionBalance"
-                android:text="Balance Enquiry"
+                android:background="#000000"
+                android:fontFamily="sans-serif-light"
+                android:padding="16dp"
                 android:textColor="#FFF157"
-                android:textSize="20sp"
+                android:text="₹ "
+                android:textSize="45sp"
                 android:textStyle="bold" />
 
-
-            <Button
-                android:id="@+id/exit"
-                android:layout_width="150dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/balance_enquiry"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="16dp"
+                android:layout_marginRight="32dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#000088"
-                android:onClick="actionExit"
-                android:text="Exit Session"
-                android:textColor="#FFF157"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#000000"
+                android:text="Please ENTER and COLLECT cash from appropriate CASH SLOT."
+                android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/withdraw"
-                android:layout_width="163dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#000088"
-                android:onClick="actionWithdraw"
-                android:text="Cash Withdraw"
-                android:textColor="#FFF157"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
-            <Button
-                android:id="@+id/Deposit"
-                android:layout_width="163dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/withdraw"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#000088"
-                android:onClick="actionDeposit"
-                android:text="Cash Deposit"
-                android:textColor="#FFF157"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="32dp"
+                  android:layout_marginLeft="16dp"
+
+                  android:fontFamily="sans-serif-medium"
+                  android:textColor="#000000"
+                  android:text="Amount must be a multiple of 100 and must not exceed ₹10000."
+                  android:textSize="24sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginTop="16dp"
+                  android:layout_marginBottom="16dp"
+                  android:background="#FF0000"
+                  android:text=""/>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <EditText
+                      android:id="@+id/dep_text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="16dp"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:paddingLeft="16dp"
+                      android:paddingRight="16dp"
+                      android:inputType="number"
+                      android:maxLength="5"
+                      android:background="#FFFFFF"
+                      android:textSize="30sp"
+                      android:hint="Enter Amount"/>
+
+                  <Button
+                      android:id="@+id/deposit_button"
+                      android:layout_width="150dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="13dp"
+                      android:backgroundTint="#000088"
+                      android:text="Deposit"
+                      android:textColor="#FFF157"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:onClick="actionDeposit"/>
+
+              </LinearLayout>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginTop="16dp"
+                  android:background="#FF0000"
+                  android:text=""/>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <EditText
+                      android:id="@+id/with_text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="32dp"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:background="#FFFFFF"
+                      android:paddingLeft="16dp"
+                      android:paddingRight="16dp"
+                      android:inputType="number"
+                      android:maxLength="5"
+                      android:textSize="30sp"
+                      android:hint="Enter Amount"/>
+
+                  <Button
+                      android:id="@+id/withdraw_button"
+                      android:layout_width="150dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="28dp"
+                      android:backgroundTint="#000088"
+                      android:padding="0dp"
+                      android:text="Withdraw"
+                      android:textColor="#FFF157"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:onClick="actionWithdraw"/>
+
+              </LinearLayout>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginTop="16dp"
+                  android:background="#FF0000"
+                  android:text=""/>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <Button
+                      android:id="@+id/exit"
+                      android:layout_width="150dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="16dp"
+                      android:layout_marginLeft="16dp"
+                      android:layout_marginTop="16dp"
+                      android:layout_marginEnd="16dp"
+                      android:layout_marginRight="16dp"
+                      android:layout_marginBottom="16dp"
+                      android:backgroundTint="#000088"
+                      android:text="Exit Session"
+                      android:textColor="#FFF157"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:onClick="actionExit"/>
+
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

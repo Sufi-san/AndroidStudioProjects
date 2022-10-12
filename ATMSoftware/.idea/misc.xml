@@ -3,12 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_atm.xml" value="0.2015625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_balance_enquiry.xml" value="0.215625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_cash_deposit.xml" value="0.2015625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_cash_withdraw.xml" value="0.2015625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_global.xml" value="0.215625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_atm.xml" value="0.215625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/ATMSoftware/app/src/main/res/layout/activity_main.xml" value="0.1585144927536232" />
       </map>
     </option>
   </component>

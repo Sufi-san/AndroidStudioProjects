@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     tools:context=".MainActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/atm_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/atm_machine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:alpha="0.8"
+            android:background="#FFF59E"
+            android:fontFamily="monospace"
+            android:paddingLeft="16dp"
+            android:text="ATM Simulation Software"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#FF0000"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -77,3 +113,4 @@
 
     </LinearLayout>
 </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

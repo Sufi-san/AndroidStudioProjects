@@ -8,29 +8,29 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-    public class MainActivity extends AppCompatActivity {
-        public int MainPIN = 1234, EnterPIN = 0;
+public class MainActivity extends AppCompatActivity {
+    public int MainPIN = 1234, EnterPIN = 0;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        }
-
-        public void action1(View view){
-            EditText enterPinEdit = (EditText) findViewById(R.id.enter_pin);
-            String enterPinString =  enterPinEdit.getText().toString();
-            EnterPIN = Integer.parseInt(enterPinString);
-            if(EnterPIN == MainPIN){
-                Intent i = new Intent(this, AtmActivity.class);
-                startActivity(i);
-            }
-            else{
-                TextView message = (TextView) findViewById(R.id.display_text);
-                message.setTextColor(getResources().getColor(R.color.red));
-                message.setText("Invalid PIN");
-            }
-
-        }
     }
+
+    public void action1(View view){
+        EditText enterPinEdit = (EditText) findViewById(R.id.enter_pin);
+        String enterPinString =  enterPinEdit.getText().toString();
+        EnterPIN = Integer.parseInt(enterPinString);
+        if(EnterPIN == MainPIN){
+            Intent i = new Intent(this, AtmActivity.class);
+            startActivity(i);
+        }
+        else{
+            TextView message = (TextView) findViewById(R.id.display_text);
+            message.setTextColor(getResources().getColor(R.color.red));
+            message.setText("Invalid PIN");
+        }
+
+    }
+}

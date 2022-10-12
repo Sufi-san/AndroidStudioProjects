@@ -14,22 +14,12 @@
         android:theme="@style/Theme.ATMSoftware"
         tools:targetApi="31">
         <activity
-            android:name=".GlobalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CashWithdraw"
-            android:exported="false" />
-        <activity
-            android:name=".CashDeposit"
-            android:exported="false" />
-        <activity
-            android:name=".BalanceEnquiry"
-            android:exported="false" />
-        <activity
             android:name=".AtmActivity"
+            android:noHistory="true"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:noHistory="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
