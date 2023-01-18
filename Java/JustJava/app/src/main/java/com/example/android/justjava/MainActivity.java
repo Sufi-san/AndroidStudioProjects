@@ -2,6 +2,8 @@
 package com.example.android.justjava;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -42,13 +44,19 @@ int numberOfCoffees = 0, rate = 20;
         //Declaring variables,Assigning value to variables and calling functions.
         String price = calculatePrice(hasWhippedCream, hasChocolate);
         String val = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
-        if(numberOfCoffees == 0) {
-            Toast.makeText(this,"Cannot order 0 coffees",Toast.LENGTH_SHORT).show();
-            return;
-        } else
-        displayPriceMessage(val);
-    }
 
+        if (numberOfCoffees == 0) {
+            Toast.makeText(this, "Cannot order 0 coffees", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+            emailIntent.setData(Uri.parse("mailto:"));
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"sufy_456@hotmail.com"});
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT,"Just Java order for "+name);
+            emailIntent.putExtra(Intent.EXTRA_TEXT,val);
+              startActivity(emailIntent);
+        }
+    }
     /**
      * This method increments numberOfCoffees by 1
      */
@@ -60,7 +68,6 @@ int numberOfCoffees = 0, rate = 20;
             return;
         } else {
             displayQuantity(numberOfCoffees);
-            displayPrice(numberOfCoffees * rate);
         }
     }
 
@@ -75,7 +82,6 @@ int numberOfCoffees = 0, rate = 20;
         return;
         } else {
             displayQuantity(numberOfCoffees);
-            displayPrice(numberOfCoffees * rate);
         }
     }
 
@@ -87,22 +93,6 @@ int numberOfCoffees = 0, rate = 20;
         quantityTextView.setText(""+number);
     }
 
-
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayPriceMessage(String message){
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(message);
-    }
-
-    /**
-     * This method displays the initial price of cups of coffee.
-     */
-    private void displayPrice(int amt){
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText("₹"+amt+" (without toppings)");
-    }
 
     /**
      * This method displays a summary for the complete order of coffees.
@@ -146,8 +136,4 @@ int numberOfCoffees = 0, rate = 20;
         }
         return message;
     }
-
-/**
- * NumberFormat.getCurrencyInstance().format(number)
- */
 }
